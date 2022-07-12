@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "../Home/home.module.scss";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import RecipeCard from "./RecipeCard";
 
 const Home = () => {
