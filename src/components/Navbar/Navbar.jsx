@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "../Navbar/navbar.module.scss";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  // const [isLoggin, setIsloggin] = useState(false);
+
+  // if (isLoggin) {
+  //   return;
+  // }
   return (
     <nav className={classes.nav}>
-      <Link to="/">
+      <NavLink to="/">
         <h2>Recipe App</h2>
-      </Link>
+      </NavLink>
       <div className={classes["section-container"]}>
         <ul>
-          <li>About</li>
-          <li>Github</li>
-          <li>Login</li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/omer-yagci">
+              Github
+            </a>
+          </li>
+          <li>
+            <NavLink to="/">Login</NavLink>
+          </li>
         </ul>
       </div>
     </nav>

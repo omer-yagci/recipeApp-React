@@ -1,0 +1,40 @@
+.container {
+  min-height: 100vh;
+  padding-bottom: 20px;
+  background-color: grey;
+  text-align: center;
+
+  img {
+    width: 70%;
+  }
+  h2 {
+    text-align: center;
+    margin: 2rem;
+    color: white;
+  }
+  .article {
+    max-width: 80%;
+    margin: auto;
+    border: 2px solid white;
+
+    p,
+    h1 {
+      color: white;
+      text-align: end;
+      line-height: 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      // padding: 0.1rem;
+      margin: 0.5rem;
+    }
+  }
+  span {
+    color: black;
+    &:hover {
+      font-style: italic;
+      color: white;
+      background-color: black;
+    }
+  }
+}
