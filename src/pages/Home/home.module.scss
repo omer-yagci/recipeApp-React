@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: 2rem auto;
+  flex-direction: column;
+  h1 {
+    margin: 0.3rem auto;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .form {
+    border: 5px solid white;
+  }
+  input,
+  button,
+  select {
+    padding: 0.5rem;
+    margin: 0.7rem;
+  }
+  button {
+    background-color: white;
+    border: none;
+    &:hover {
+      cursor: pointer;
+      background-color: black;
+      color: white;
+    }
+  }
+}
