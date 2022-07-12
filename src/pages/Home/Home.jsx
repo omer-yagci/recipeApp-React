@@ -25,7 +25,7 @@ const Home = () => {
     try {
       const { data } = await axios.get(url);
       console.log(data);
-      // setFoodData(data.hits);
+      setFoodData(data.hits);
     } catch (error) {
       console.log(error);
     }
@@ -37,28 +37,32 @@ const Home = () => {
   };
 
   return (
-    <div className={classes.container}>
-      <h1>Food app</h1>
-      <form className={classes.form} onSubmit={SubmitHandler}>
-        <input type="text" onChange={inputHandler} value={query} />
-        <button> Search</button>
-        <select
-          name="menuItem"
-          id="menu"
-          onChange={selectHandler}
-          defaultValue={"breakfast"}
-        >
-          <option value="breakfast">Breakfast</option>
-          <option value="lunch">Lunch</option>
-          <option value="dinner">Dinner</option>
-          <option value="snack">Snack</option>
-          <option value="teatime">TeaTime</option>
-        </select>
-      </form>
-      {foodData?.map((item, index) => {
-        return <RecipeCard key={index} item={item.recipe} />;
-      })}
-    </div>
+    <>
+      <div className={classes.container}>
+        <h1>Food app</h1>
+        <form className={classes.form} onSubmit={SubmitHandler}>
+          <input type="text" onChange={inputHandler} value={query} />
+          <button> Search</button>
+          <select
+            name="menuItem"
+            id="menu"
+            onChange={selectHandler}
+            defaultValue={"breakfast"}
+          >
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="snack">Snack</option>
+            <option value="teatime">TeaTime</option>
+          </select>
+        </form>
+      </div>
+      <div className={classes["card-container"]}>
+        {foodData?.map((item, index) => {
+          return <RecipeCard key={index} item={item.recipe} />;
+        })}
+      </div>
+    </>
   );
 };
 

@@ -5,6 +5,7 @@
   background-color: transparent;
   margin: 0 auto;
   flex-direction: column;
+
   h1 {
     margin: 0.3rem auto;
     color: bisque;
@@ -29,4 +30,11 @@
       color: white;
     }
   }
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 1rem;
 }
