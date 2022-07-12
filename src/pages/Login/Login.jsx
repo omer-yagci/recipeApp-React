@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import classes from "../Login/login.module.scss";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   let navigate = useNavigate();
@@ -9,7 +11,23 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    navigate("/home");
+    if (username.length <= 0 || password.length <= 0) {
+      toast.warn(
+        "Required fields cannot be left blank",
+        { toastId: "asdasdasdasd" },
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        }
+      );
+    } else {
+      navigate("/home");
+    }
   };
 
   return (
@@ -28,8 +46,25 @@ const Login = () => {
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />
-        <button> Login</button>
+        {username.length <= 0 || password.length <= 0 ? (
+          <button type="submit" style={{ color: "red" }}>
+            Login
+          </button>
+        ) : (
+          <button type="submit"> Login</button>
+        )}
       </form>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
