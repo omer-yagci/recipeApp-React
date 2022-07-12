@@ -10,7 +10,7 @@ const Navbar = () => {
   // }
   return (
     <nav className={classes.nav}>
-      <NavLink to="/">
+      <NavLink to="/home">
         <h2>Recipe App</h2>
       </NavLink>
       <div className={classes["section-container"]}>

@@ -3,7 +3,6 @@ import classes from "../Home/home.module.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
-import About from "../About/About";
 
 const Home = () => {
   const [query, setQuery] = useState("");
@@ -21,38 +20,44 @@ const Home = () => {
   const selectHandler = (event) => {
     setMeal(event.target.value);
   };
-  const clickHandler = () => {
-    getDataFromAPI();
-  };
 
   const getDataFromAPI = async () => {
     try {
       const { data } = await axios.get(url);
       console.log(data);
-      console.log(data.hits);
-      setFoodData(data.hits);
+      // setFoodData(data.hits);
     } catch (error) {
       console.log(error);
     }
   };
-  useEffect(() => {
+  const SubmitHandler = (event) => {
+    event.preventDefault();
     getDataFromAPI();
-  }, []);
+    setQuery("");
+  };
+
   return (
     <div className={classes.container}>
       <h1>Food app</h1>
-      <form className={classes.form}>
+      <form className={classes.form} onSubmit={SubmitHandler}>
         <input type="text" onChange={inputHandler} value={query} />
-        <button onClick={clickHandler}> Search</button>
-        <select name="menuItem" id="menu" onChange={selectHandler}>
-          <option value="">Breakfast</option>
-          <option value="">Lunch</option>
-          <option value="">Dinner</option>
-          <option value="">Snack</option>
-          <option value="">TeaTime</option>
+        <button> Search</button>
+        <select
+          name="menuItem"
+          id="menu"
+          onChange={selectHandler}
+          defaultValue={"breakfast"}
+        >
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+          <option value="snack">Snack</option>
+          <option value="teatime">TeaTime</option>
         </select>
       </form>
-      <RecipeCard foodData={foodData} />
+      {foodData?.map((item, index) => {
+        return <RecipeCard key={index} item={item.recipe} />;
+      })}
     </div>
   );
 };
