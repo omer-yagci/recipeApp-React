@@ -46,9 +46,11 @@ const Details = () => {
         </ul>
       </section>
       <article>
-        {ingredients.map((element) => {
-          return <p>{element.text}</p>;
-        })}
+        <ol>
+          {ingredients.map((element, index) => {
+            return <li key={index}>{element.text}</li>;
+          })}
+        </ol>
       </article>
     </div>
   );
