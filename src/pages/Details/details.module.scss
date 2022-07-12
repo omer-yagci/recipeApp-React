@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100vw;
+
+  .title {
+    text-align: left;
+    margin: 2rem 9rem;
+  }
+  .image-container {
+    border: 2px solid black;
+    margin: 0 4rem;
+
+    img {
+      margin: 0.7rem;
+    }
+  }
+}
