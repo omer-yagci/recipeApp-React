@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  a {
+    text-decoration: none;
+    color: bisque;
+    font-style: italic;
+    font-size: 1.4rem;
+    margin: 0.2rem 1rem;
+  }
+  ul {
+    display: flex;
+    padding: 1rem;
+    li {
+      margin: 0 1rem;
+      list-style: none;
+      color: bisque;
+      font-size: 1.4rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

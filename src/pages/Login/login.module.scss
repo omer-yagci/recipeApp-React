@@ -1,14 +1,14 @@
 .container {
   display: flex;
   justify-content: center;
-  background-color: #f3f3f3;
+  background-color: white;
   align-items: center;
   height: 70vh;
   width: 35%;
   margin: 4rem auto;
   border-radius: 50%;
   flex-direction: column;
-  border: 2px solid white;
+  border: 2px solid black;
   .form {
     display: flex;
     justify-content: center;
