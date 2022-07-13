@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/recipeApp-React/static/css/main.7c2f75d4.css",
+    "main.js": "/recipeApp-React/static/js/main.fbe14a5c.js",
+    "static/media/loading.gif": "/recipeApp-React/static/media/loading.9580626320c504a04ea8.gif",
+    "static/media/coding.svg": "/recipeApp-React/static/media/coding.0ee2fc3a99672b144ac05c8cb4994d69.svg",
+    "static/media/notFound.png": "/recipeApp-React/static/media/notFound.f6fa8e221c9299649b1a.png",
+    "index.html": "/recipeApp-React/index.html",
+    "main.7c2f75d4.css.map": "/recipeApp-React/static/css/main.7c2f75d4.css.map",
+    "main.fbe14a5c.js.map": "/recipeApp-React/static/js/main.fbe14a5c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c2f75d4.css",
+    "static/js/main.fbe14a5c.js"
+  ]
+}
