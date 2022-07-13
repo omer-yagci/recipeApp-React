@@ -16,9 +16,11 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Login />} />
+
             <Route path="/home" element={<PrivateRouter />}>
               <Route path="" element={<Home />} />
             </Route>
+
             <Route path="/about" element={<About />} />
             <Route path="/details" element={<Details />} />
             <Route path="*" element={<NotFound />} />

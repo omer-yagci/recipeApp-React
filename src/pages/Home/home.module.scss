@@ -38,3 +38,10 @@
   gap: 2rem;
   margin: 1rem auto;
 }
+
+.gif-container {
+  text-align: center;
+  .gif {
+    width: 50%;
+  }
+}

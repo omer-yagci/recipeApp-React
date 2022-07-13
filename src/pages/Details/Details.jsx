@@ -5,9 +5,12 @@ import classes from "../Details/details.module.scss";
 const Details = () => {
   const location = useLocation();
 
+  // Get data with using useLocation func.
+
   const item = location.state;
   const { ingredients } = item;
-  console.log(ingredients);
+
+  // console.log(ingredients);
 
   return (
     <div className={classes.container}>
