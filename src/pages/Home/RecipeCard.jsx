@@ -14,7 +14,9 @@ const RecipeCard = ({ item }) => {
     <>
       <div className={classes.card}>
         <h3>{label} </h3>
-        <img src={image} alt={label} />
+        <div className={classes.images}>
+          <img src={image} alt={label} />
+        </div>
         <button onClick={viewClickHandler} className={classes.btn}>
           View More
         </button>
