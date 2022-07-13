@@ -8,16 +8,19 @@ const Home = () => {
   const [query, setQuery] = useState("");
   const [meal, setMeal] = useState("");
   const [foodData, setFoodData] = useState([]);
+  const [error, setError] = useState(false);
 
   const APP_KEY = "f8357d5c64951a7fbf25700380c7c3e5";
   const APP_ID = "7589303c";
   const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meal}`;
 
   const inputHandler = (event) => {
+    // console.log(query);
     setQuery(event.target.value);
   };
 
   const selectHandler = (event) => {
+    // console.log(meal);
     setMeal(event.target.value);
   };
 
@@ -35,6 +38,8 @@ const Home = () => {
     getDataFromAPI();
     setQuery("");
   };
+  if (error) {
+  }
 
   return (
     <>
