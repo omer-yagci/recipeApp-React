@@ -13,19 +13,56 @@
   .image-container {
     border: 2px solid black;
     margin: 0 4rem;
+    background-color: lightcoral;
 
     img {
       margin: 0.7rem;
+      border-radius: 1rem;
+      border: 5px solid orangered;
     }
   }
   section {
+    background-color: lightgrey;
     position: absolute;
     left: 30rem;
     top: 5rem;
+    border: 2px solid black;
+
+    ul {
+      li {
+        margin: 1rem;
+        list-style: none;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: black;
+        border-bottom: 1px solid black;
+        font-style: italic;
+      }
+    }
   }
   article {
     position: absolute;
     left: 45rem;
-    top: 10rem;
+    top: 2rem;
+    background-color: lightgrey;
+    border: 2px solid black;
+
+    ol {
+      li {
+        margin: 0.3rem;
+        padding: 0.1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        border-bottom: 1px solid black;
+        font-style: italic;
+        list-style-position: inside;
+        color: black;
+      }
+    }
+  }
+  h3 {
+    margin: 0.5rem;
+    text-decoration: underline double;
   }
 }
