@@ -5,9 +5,11 @@
 
 Project aims to create a Recipe App.
 
-## Problem Statement
 
-- We are adding a new project to our portfolios. So you and your colleagues have started to work on the project.
+## See the Page
+
+![Project 004 Snapshot](recipe-app.gif)
+
 
 ## Project Skeleton
 
@@ -53,15 +55,13 @@ SOLUTION
 └── yarn.lock
 ```
 
-## Expected Outcome
 
-![Project 004 Snapshot](recipe-app.gif)
 
 ## Objective
 
 Build a Recipe App using ReactJS.
 
-### At the end of the project, following topics are to be covered;
+### At the end of the project, followed topics are to be covered;
 
 - HTML
 
@@ -71,7 +71,7 @@ Build a Recipe App using ReactJS.
 
 - ReactJS
 
-### At the end of the project, students will be able to;
+### At the end of the project, you will be able to;
 
 - improve coding skills within HTML & CSS & JS & ReactJS.
 
